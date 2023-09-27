@@ -1,24 +1,66 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';  
+// import { Switch, Route } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar';
+import Textform from'./components/Textform';
+import Alert from'./components/Alert';
+import Aboutme from'./components/Aboutme';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  BrowserRouter
+} from "react-router-dom";
 
 function App() {
+ 
+  const [mode,setMode] = useState('light');
+  const [alert,setAlert] = useState(null);
+  const showAlert=(message,type)=>{
+    setAlert({
+      msg:message,
+      tp:type
+    });
+  }
+   setTimeout(() => {
+    setAlert(null);
+  },4000);
+  setInterval(() => {
+    document.title="TextUtils is a Amazing Website"
+  },(5000));
+  setInterval(() => {
+    document.title="TextUtils-Home"
+  },(1500));
+
+  const toggleMode=()=>{
+    if(mode==='light'){
+      setMode('dark');
+      document.body.style.backgroundColor='#001121';
+      showAlert("Dark mode is enabled","success");
+      // document.title="TextUtils-Darkmode"
+    }else{
+      setMode('light')
+      document.body.style.backgroundColor='white';
+      showAlert("Light mode is enabled","success");
+      // document.title="TextUtils-LightMode"
+  }
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+      {/* <BrowserRouter> */}
+           <Router>
+    <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode}/ >
+      <Alert alert={alert}/>
+    <div className="container my-3"> 
+          <Routes>
+          <Route path="/Aboutme" element={<Aboutme/>}/>
+          <Route path="/" element={ <Textform email="Email" showAlert={showAlert}  mode={mode}/>}/>
+        </Routes>
     </div>
+    </Router>
+    {/* </BrowserRouter> */}
+    </>
   );
 }
 
