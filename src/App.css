@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Alegreya+Sans+SC:wght@300&family=Mooli&family=Poppins:wght@300&family=Zilla+Slab:wght@300&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+}
 .App {
   text-align: center;
 }
