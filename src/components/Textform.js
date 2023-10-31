@@ -36,7 +36,7 @@ export default function TextFrom(props) {
     <div className="container my-5"  style={{color:props.mode==='dark'?'white':'black'}}>
     <h3>  Word counter | Character counter| Text Preview | Lowercase to Uppercase | Uppercase to Lowercase | Read Aloud |</h3><br />
     <h2>Try TextUtils </h2>
-    <textarea className="form-control" onChange={handleOnChange} style={{background:props.mode==='dark'?'grey':'white',color:props.mode === 'dark' ? 'white' : 'dark'}} id="exampleFormControlTextarea1" value={text} rows="9"></textarea>
+    <textarea className="form-control" onChange={handleOnChange} style={{background:props.mode==='dark'?'grey':'white',color:props.mode === 'dark' ? 'dark' : 'white'}} id="exampleFormControlTextarea1" value={text} rows="9"></textarea>
     </div>
   <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleupclick} >UppeCase</button>
   <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handlelowclick} >LowerCase</button>

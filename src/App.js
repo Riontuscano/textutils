@@ -1,9 +1,9 @@
-import React, { useState } from 'react';  
+ import React, { useState } from 'react';  
 // import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Textform from'./components/Textform';
-import Alert from'./components/Alert';
+import Alert from'./components/Alert'; 
 import Aboutme from'./components/Aboutme';
 import {
   BrowserRouter as Router,
