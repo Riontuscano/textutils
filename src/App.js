@@ -39,7 +39,7 @@ function App() {
       // document.title="TextUtils-Darkmode"
     }else{
       setMode('light')
-      document.body.style.backgroundColor='white';
+      document.body.style.backgroundColor='white';    
       showAlert("Light mode is enabled","success");
       // document.title="TextUtils-LightMode"
   }
@@ -49,6 +49,7 @@ function App() {
       {/* <BrowserRouter> */}
            <Router>
     <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} state="active"/ >
+    {/* <Navbar mode={mode} toggleMode={toggleMode} state="active"/ > */}
       <Alert alert={alert}/>
     <div className="container my-3"> 
           <Routes>

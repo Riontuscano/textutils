@@ -72,6 +72,6 @@ export default function Navbar(props) {
 
 
 Navbar.propTypes = {title:PropTypes.string.isRequired,
-                   about: PropTypes.string.isRequired}
-Navbar.deafaultProps = {title:'Build-in',
-                        about:'About Us' };
+                   about: PropTypes.string.isRequired} // incoming should be string
+Navbar.defaultProps = {title:'Build-in',
+                        about:'About Us' }; // nothing is passed this is use
