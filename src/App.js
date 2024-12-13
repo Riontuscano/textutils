@@ -46,7 +46,7 @@ function App() {
 }
   return (
     <>
-      {/* <BrowserRouter> */}
+      <BrowserRouter>
            <Router>
     <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} state="active"/ >
     {/* <Navbar mode={mode} toggleMode={toggleMode} state="active"/ > */}
@@ -58,7 +58,7 @@ function App() {
         </Routes>
     </div>
     </Router>
-    {/* </BrowserRouter> */}
+    </BrowserRouter>
     </>
   );
 }
